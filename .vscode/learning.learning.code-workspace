@@ -1,0 +1,46 @@
+{
+  "folders": [
+    { "path": "../chapter1-hello_rust" },
+    { "path": "../chapter2-gussing_game" },
+    { "path": "../chapter3-concepts" }
+  ],
+  "settings": {
+  "editor.inlineSuggest.enabled": false,
+  "github.copilot.enable": {
+    "*": true,
+    "rust": false
+  }
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+    {
+      "label": "Serve Rust Docs",
+      "type": "shell",
+      "command": "~/Documents/Rust/learning/.doc/doc.sh",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": {
+          "regexp": "^###NEVERMATCH###(.*)$",
+          "file": 1,
+          "message": 1
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Serving Rust docs from:",
+          "endsPattern": "Serving Rust docs from:"
+        }
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "reveal": "silent",
+        "panel": "dedicated",
+        "close": true
+      }
+    }
+  ]
+  }
+}
