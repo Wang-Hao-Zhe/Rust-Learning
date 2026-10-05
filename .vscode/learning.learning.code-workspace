@@ -17,7 +17,7 @@
     {
       "label": "Serve Rust Docs",
       "type": "shell",
-      "command": "~/Documents/Rust/learning/.doc/doc.sh",
+      "command": "${workspaceFolder:chapter1-hello_rust}/../.doc/doc.sh",
       "isBackground": true,
       "problemMatcher": {
         "owner": "custom",
